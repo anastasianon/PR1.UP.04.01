@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PostCalculate</title>
+</head>
+<body>Калькулятор</h1>
+
+
+<form action="/post" method="post">
+    <label for="a">число</label>
+    <input type="text" name="a" id="a" required style="margin-bottom: 20px"><br>
+
+    <label for="b"> число</label>
+    <input type="text" name="b" id="b" required style="margin-bottom: 20px"><br>
+
+    <label for="action">Операция</label>
+    <select name="action" id="action" style="margin-bottom: 20px">
+        <option value="plus">+</option>
+        <option value="min">-</option>
+        <option value="multi">*</option>
+        <option value="div">/</option>
+    </select><br>
+
+    <input type="submit" name="otvet" value="otvet" style="margin-bottom: 20px"><br>
+    <p>Результат</p>
+    <p th:text="${result}"/>
+
+</form>
+</body>
+</html>
